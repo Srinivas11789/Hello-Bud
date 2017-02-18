@@ -59,8 +59,17 @@ def getCourse(name='default', professor='default', time='default'):
                 continue
         return None
 
-print getCourse(time="Tue")
+print getCourse(time="Mon")
 # Unit Test
+#course = getCourse(name="name_of_course)
+#course = getCourse(professor="professor_handling_course")
+#course = getCourse(time="Weekday")
+#print course
+
+#deadlines = getDeadlines(type='type_of_deadline')
+#type_of_deadline : assignment, lab report etc.,
+#Without any arguments, return all the deadlines
+
 
 #s = getcurriculum()
 #print s

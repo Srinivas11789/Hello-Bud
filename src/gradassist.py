@@ -17,10 +17,6 @@ def getcurriculum(course = ""):
         print e
 
 
-def getCourses():
-    return data["courses"]
-
-
 def getDeadlines(type='default'):
     deadLines = data["deadlines"]
     if(type=='default'):
@@ -34,8 +30,9 @@ def getDeadlines(type='default'):
 
 
 def getCourse(name='default', professor='default', time='default'):
-    courses = getCourses();
-
+    courses = data['courses']
+    if name=='default'and professor=='default' and time=='default':
+        return courses
     if name!='default':
         for course in courses:
             if(str(course['name']).lower()==str(name).lower()):
@@ -59,7 +56,23 @@ def getCourse(name='default', professor='default', time='default'):
                 continue
         return None
 
-print getCourse(time="Mon")
+
+def getEvents(type='default'):
+    events = data['events']
+    if type=='default':
+        return events
+
+    else:
+        eventsList = []
+        for event in events:
+            if str(event['type']).lower() == str(type).lower():
+                eventsList.append(event)
+        return eventsList
+
+
+
+
+print getEvents(type="hackathon")
 # Unit Test
 #course = getCourse(name="name_of_course)
 #course = getCourse(professor="professor_handling_course")
@@ -69,6 +82,9 @@ print getCourse(time="Mon")
 #deadlines = getDeadlines(type='type_of_deadline')
 #type_of_deadline : assignment, lab report etc.,
 #Without any arguments, return all the deadlines
+
+#events = getEvents(type='event_type')
+#event types : hackathon, free food, seminar
 
 
 #s = getcurriculum()

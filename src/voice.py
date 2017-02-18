@@ -58,3 +58,7 @@ def speakText(aText):
   print(aText)
 
 
+
+#Unit test
+# speakVoice("Hello")
+# myVoice = listenVoice()

@@ -2,7 +2,7 @@
 # Main.py
 
 # Module Import
-include animation  # To Perform the Assistant Animation - In Progress
-include voice      # Assistant Voice Control - Almost Done
-include scrapper      # Scrapping the Web for Nest Results - In Progress
-
+import animation  # To Perform the Assistant Animation - In Progress
+import voice      # Assistant Voice Control - Almost Done
+import scrapper      # Scrapping the Web for Nest Results - In Progress
+impoty gradassist.py  # Graduate Assistant

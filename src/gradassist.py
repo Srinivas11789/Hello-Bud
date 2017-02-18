@@ -5,9 +5,6 @@ import json
 
 def getcurriculum(course = ""):
     request = 'http://engineering.nyu.edu/academics/programs/computer-science-ms/curriculum/'
-    gdata = request.text
-    if course:
-        
     try:
         page = requests.get(request)
         gdata = page.text
@@ -18,4 +15,5 @@ def getcurriculum(course = ""):
 
 # Unit Test
 
-#getcurriculum(course)
+#s = getcurriculum()
+#print s

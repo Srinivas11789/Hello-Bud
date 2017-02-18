@@ -5,16 +5,24 @@ import time
 import sys
 import speech_recognition
 
-recognizer = speech_recognition.Recognizer()
+# Some Initialisation for Speech recognition and Speech synthesizer
+mySpeechRecognizer = speech_recognition.Recognizer()
+nssp = NSSpeechSynthesizer
+myAssistant = nssp.alloc().init()
 
-def listen():
+# Setting the voice to Victoria
+myVoice = "com.apple.speech.synthesis.voice.Victoria"
+myAssistant.setVoice_(myVoice)
+
+## Listen voice function which will listen for voice input from the user
+## No arguments as Mic is used as default source
+## returns the Audio sample which is recorded from Mic
+def listenVoice():
   with speech_recognition.Microphone() as source:
-                recognizer.adjust_for_ambient_noise(source)
-                audio = recognizer.listen(source)
+    mySpeechRecognizer.adjust_for_ambient_noise(source)
+    myAudioInput = mySpeechRecognizer.listen(source)
   try:
-    print("You said " + recognizer.recognize_google(audio))
-    #return recognizer.recognize_sphinx(audio)
-    return recognizer.recognize_google(audio)
+    return mySpeechRecognizer.recognize_google(myAudioInput)
   except speech_recognition.UnknownValueError:
     print("Could not understand audio")
   except speech_recognition.RequestError as e:
@@ -22,35 +30,31 @@ def listen():
   return ""
 
 
-if len(sys.argv) < 2:
-   text = raw_input('> ')
-else:
-   text = sys.argv[1]
 
-nssp = NSSpeechSynthesizer
+## Speak voice function which speaks the given input
+## One "String" Argument which is the text to speak
+## returns nothing
+def speakVoice(aPhrase):
+  myAssistant.startSpeakingString_(aPhrase)
+  while myAssistant.isSpeaking():
+    time.sleep(1)
 
-ve = nssp.alloc().init()
 
-voices = ["com.apple.speech.synthesis.voice.Alex",
-"com.apple.speech.synthesis.voice.Vicki",
-"com.apple.speech.synthesis.voice.Victoria",
-"com.apple.speech.synthesis.voice.Zarvox" ]
 
-# for voice in nssp.availableVoices():
-for voice in voices:
-   ve.setVoice_(voice)
-   print voice
-   ve.startSpeakingString_(text)
-   while ve.isSpeaking():
-      time.sleep(1)
+## Listen text function which takes text input from command line
+## No arguments
+## returns the specified input
+def listenText():
+  myInputText = raw_input('Wassup Buddy :')
+  return myInputText
 
-print("Speak now")
-mystring = "You said" + listen()
-for voice in voices:
-   ve.setVoice_(voice)
-   print voice
-   ve.startSpeakingString_(mystring)
-   while ve.isSpeaking():
-      time.sleep(1)
-print("Listening done")
-#listen()
+
+
+
+## Speak text function which will print the text given
+## One argument which is to be printed
+## returns nothing
+def speakText(aText):
+  print(aText)
+
+

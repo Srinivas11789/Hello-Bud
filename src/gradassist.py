@@ -11,6 +11,7 @@ def getcurriculum(course = ""):
     try:
         page = requests.get(request)
         gdata = page.text
+        return gdata
     except requests.exceptions.RequestException as e:
         print e
 

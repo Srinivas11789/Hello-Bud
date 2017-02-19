@@ -37,7 +37,7 @@ def listenVoice():
 def speakVoice(aPhrase):
   myAssistant.startSpeakingString_(aPhrase)
   while myAssistant.isSpeaking():
-    time.sleep(1)
+    time.sleep(2)
 
 
 

@@ -11,15 +11,16 @@
           "name": "Internet Architecture and protocols",
           "professor": "Alex",
           "classroom": "JAB 474",
-          "time": "Tue, 21 Feb 2017 15:45:30 Eastern Standard Time"
+          "time": "Tue,15:45:30 EST",
+          "difficulty": 4
       },
       {
           "id": "CS-6033",
           "name": "Design and Analysis of Algorithms",
           "professor": "Linda Sellie",
           "classroom": "Dibner Auditorium",
-          "time": "Mon, 20 Feb 2017 18:00:30 Eastern Standard Time"
-
+          "time": "Mon,18:00:30 EST",
+          "difficulty": 7
       }
 
     ],
@@ -27,47 +28,39 @@
       {
         "type": "Assignment",
         "subject": "Design and Analysis of Algorithms",
-        "time": "Tue, 21 Feb 2017 17:30:00 Eastern Standard Time",
+        "time": "Tue,17:30:00 EST",
         "difficulty": "7",
-        "time_required": "3 hours"
-
+        "time_required": "3 hours",
+        "days": 2
       },
       {
         "type": "lab report",
         "subject": "Network Security",
-        "time": "Sat, 25 Feb 2017 17:30:00 Eastern Standard Time",
+        "time": "Thu,17:30:00 EST",
         "difficulty": "4",
-        "time_required": "1 hour"
-
-      },
-      {
-        "type": "lab report",
-        "subject": "Network Security",
-        "time": "Thu, 23 Feb 2017 17:30:00 Eastern Standard Time",
-        "difficulty": "4",
-        "time_required": "1 hour"
-
+        "time_required": "1 hour",
+        "days": 4
       }
     ],
     "events": [
       {
         "type": "Hackathon",
         "subject": "Hack NYU",
-        "time": "Fri, 17 Feb 2017 20:00:00 Eastern Standard Time",
+        "time": "Fri,20:00:00 EST",
         "location": "6 MetroTech",
         "link": "http://hacknyu.org/"
       },
       {
         "type": "free food",
         "subject": "free food",
-        "time": "Sun, 19 Feb 2017 20:00:00 Eastern Standard Time",
+        "time": "Sun,20:00:00 EST",
         "location": "Maker Space",
         "link": "http://engineering.nyu.edu/life/student-resources/makerspace"
       },
       {
         "type": "seminar",
         "subject":"machine learning",
-        "time": "Fri, 17 Feb 2017 20:00:00 Eastern Standard Time",
+        "time": "Fri,20:00:00 EST",
         "location": "Pfizer Auditorium",
         "link": "http://hacknyu.org/"
       }

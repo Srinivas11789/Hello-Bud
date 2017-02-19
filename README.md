@@ -1,6 +1,3 @@
-# Idea based on Virtual Assistant 
-==== Graduate Study Guide + Idea Formulation - Workflow =====
-
 ## Inspiration
 
 A Assistant to help making critical and worthy decisions that lead to a greater impact in Education (Graduate Education) as well as Project Planning.
@@ -9,7 +6,8 @@ A Assistant to help making critical and worthy decisions that lead to a greater 
 --- Suggestions based on the best possible impact and dynamic programming
 --- Re Inventing the Clippy Assistant (Of Microsoft)
 
-## What it does
+## What it does 
+
 --- Assists a student throughout his University Education 
      - Study and Work Planner
      - Aids in learning
@@ -21,8 +19,16 @@ A Assistant to help making critical and worthy decisions that lead to a greater 
      - Syncs with Students and Organizers to communicate about events (Hackathons) happening around based on the     student interest
 
 --- Assists a person throughout his Project Planning and Execution
-    - 
+    - Implementing the Assistance of Ideas to Reality Concept
+    - Generating the best possible solution or path to head, to achieve the best solution
+    - Making Critical Decisions based on various scenarios (time, resources, dependency)
 
+--- Reverse Communication to Master
+      - Expose API to Authority of Universities, Event Organizers and Student Community to fetch the information and deliver.
+      - Analyzing the Information obtained and delivering only those information that sync with the persons interest and behavioral data.
+  
+--- Health Check
+     - Sync with health devices (Fitbit, Miband), extracts behavioral pattern of the person (communication) and suggests respective behavioral changes on food, fitness and sleep.
 
 ## How we built it
 --- Starting from the Scratch from the Voice Assistant Backwards using Python

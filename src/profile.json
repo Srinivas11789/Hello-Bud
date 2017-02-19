@@ -1,0 +1,75 @@
+{
+    "profile": {
+            "id": "N123456",
+            "name": "Mohammed Shaik",
+            "school" : "Tandon School of Engineering",
+            "program" : "Masters in Computer Engineering"
+    },
+    "courses": [
+      {
+          "id": "EL-53733",
+          "name": "Internet Architecture and protocols",
+          "professor": "Alex",
+          "classroom": "JAB 474",
+          "time": "Tue, 21 Feb 2017 15:45:30 Eastern Standard Time"
+      },
+      {
+          "id": "CS-6033",
+          "name": "Design and Analysis of Algorithms",
+          "professor": "Linda Sellie",
+          "classroom": "Dibner Auditorium",
+          "time": "Mon, 20 Feb 2017 18:00:30 Eastern Standard Time"
+
+      }
+
+    ],
+    "deadlines":  [
+      {
+        "type": "Assignment",
+        "subject": "Design and Analysis of Algorithms",
+        "time": "Tue, 21 Feb 2017 17:30:00 Eastern Standard Time",
+        "difficulty": "7",
+        "time_required": "3 hours"
+
+      },
+      {
+        "type": "lab report",
+        "subject": "Network Security",
+        "time": "Sat, 25 Feb 2017 17:30:00 Eastern Standard Time",
+        "difficulty": "4",
+        "time_required": "1 hour"
+
+      },
+      {
+        "type": "lab report",
+        "subject": "Network Security",
+        "time": "Thu, 23 Feb 2017 17:30:00 Eastern Standard Time",
+        "difficulty": "4",
+        "time_required": "1 hour"
+
+      }
+    ],
+    "events": [
+      {
+        "type": "Hackathon",
+        "subject": "Hack NYU",
+        "time": "Fri, 17 Feb 2017 20:00:00 Eastern Standard Time",
+        "location": "6 MetroTech",
+        "link": "http://hacknyu.org/"
+      },
+      {
+        "type": "free food",
+        "subject": "free food",
+        "time": "Sun, 19 Feb 2017 20:00:00 Eastern Standard Time",
+        "location": "Maker Space",
+        "link": "http://engineering.nyu.edu/life/student-resources/makerspace"
+      },
+      {
+        "type": "seminar",
+        "subject":"machine learning",
+        "time": "Fri, 17 Feb 2017 20:00:00 Eastern Standard Time",
+        "location": "Pfizer Auditorium",
+        "link": "http://hacknyu.org/"
+      }
+    ]
+}

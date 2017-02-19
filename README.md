@@ -1,4 +1,5 @@
-# Idea based on Virtual Assistant + Graduate Study Guide + Idea Formulation - Workflow
+# Idea based on Virtual Assistant 
+==== Graduate Study Guide + Idea Formulation - Workflow =====
 
 ## Inspiration
 

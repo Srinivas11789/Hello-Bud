@@ -2,9 +2,14 @@
 import requests
 import re
 import json
+import time
+from time import mktime
+from datetime import datetime
 
 with open('profile.json') as data_file:
     data = json.load(data_file)
+
+time_format = "%a, %d %b %Y %H:%M:%S %Z"
 
 
 def getcurriculum(course = ""):
@@ -49,30 +54,67 @@ def getCourse(name='default', professor='default', time='default'):
         return None
 
     elif time!='default':
+        courseList = []
         for course in courses:
             if str(course['time']).lower()[0:3]==str(time).lower():
-                return course
+                courseList.append(course)
             else:
                 continue
-        return None
+        return courseList
 
 
-def getEvents(type='default'):
+def getEvents(type='default', subject='default', time='default'):
     events = data['events']
-    if type=='default':
+    eventsList = []
+    if type=='default' and subject=='default' and time=='default':
         return events
 
-    else:
-        eventsList = []
+    elif type!='default':
         for event in events:
             if str(event['type']).lower() == str(type).lower():
                 eventsList.append(event)
-        return eventsList
+
+    elif subject!='default':
+        for event in events:
+            if str(event['subject']).lower() == str(subject).lower():
+                eventsList.append(event)
+
+    elif time!='default':
+        for event in events:
+            if str(event['time']).lower()[0:3] == str(time).lower():
+                eventsList.append(event)
+
+    return eventsList
+
+def timeDifference(t1,t2):
+    t1 = time.struct_time(t1)
+    t2 = time.struct_time(t2)
+    dt1 = datetime.fromtimestamp(mktime(t1))
+    dt2 = datetime.fromtimestamp(mktime(t2))
+
+    return dt2 - dt1
 
 
+#Suggetions
 
 
-print getEvents(type="hackathon")
+#events = getEvents(type='free food')
+#t = time.strptime(events[0]['time'],time_format)
+#print timeDifference(time.localtime(), t)
+
+def deadLinePlanner(type='default'):
+
+    currentTime = time.localtime()
+    deadLines = getDeadlines(type=type)
+    print deadLines
+
+    sorted_deadlines = sorted(deadLines, key=lambda k:time.strptime(k['time'],time_format))
+    return sorted_deadlines
+
+
+print deadLinePlanner()
+
+print getEvents(subject="machine learning")
 # Unit Test
 #course = getCourse(name="name_of_course)
 #course = getCourse(professor="professor_handling_course")

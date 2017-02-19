@@ -24,7 +24,7 @@ def listenVoice():
   try:
     return mySpeechRecognizer.recognize_google(myAudioInput)
   except speech_recognition.UnknownValueError:
-    print("Could not understand audio")
+    print("Listening....")
   except speech_recognition.RequestError as e:
     print("Recog Error; {0}".format(e))
   return ""
@@ -60,5 +60,5 @@ def speakText(aText):
 
 
 #Unit test
-# speakVoice("Hello")
+speakVoice("Hello")
 # myVoice = listenVoice()

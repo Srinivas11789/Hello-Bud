@@ -10,19 +10,22 @@ import voice		# Voice recognition features
 
 
 def startupFunction():
-  myStartupText = "Hello Buddy! I am Alia"
+  myStartupText = "Hello! I am Alia"
   voice.speakVoice(myStartupText)
 
 
 def waitForInput():
   while(1):
     inputText = str.lower(str(voice.listenVoice()))
-    print("input : " + inputText)
-    if inputText == "google":
-      voice.speakVoice("Yes")
-      inputQuery = voice.listenVoice()
-      searchResult = scrapper.search(str(inputQuery))
-      print(searchResult)
+    if inputText != "":
+      print("input : " + inputText)
+      if inputText.startswith('a') and (inputText.endswith('a') or inputText.endswith('h')):
+        voice.speakVoice("Yes")
+        inputQuery = voice.listenVoice()
+        if inputQuery != "":
+          print("Query :" + inputQuery)
+          searchResult = scrapper.search(str(inputQuery))
+          print(searchResult)
 
       
 startupFunction()

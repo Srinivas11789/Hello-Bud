@@ -1,6 +1,6 @@
 ## Inspiration
 
-A Assistant to help making critical and worthy decisions that lead to a greater impact in Education (Graduate Education) as well as Project Planning.
+An Assistant to help making critical and worthy decisions that lead to a greater impact in Education (Graduate Education) as well as Project Planning.
 --- Assistant for Graduate Study or University Education (An Helping Hand for all education purposes) 
 --- Assistant for Project Planning (From Idea to Reality)
 --- Suggestions based on the best possible impact and dynamic programming
